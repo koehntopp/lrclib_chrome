@@ -6,6 +6,7 @@ const SITE_URLS = {
   lrclib: (q) => 'https://lrclib.net/search/' + encodeURIComponent(q),
   azlyrics: (q) => 'https://www.azlyrics.com/search/?q=' + encodeURIComponent(q),
   genius: (q) => 'https://genius.com/search?q=' + encodeURIComponent(q),
+  google: (q) => 'https://www.google.com/search?q=' + encodeURIComponent('lyrics ' + q),
 };
 
 // Letzten Suchbegriff vorbelegen
