@@ -54,8 +54,8 @@
       align-items: center;
       justify-content: center;
       background: rgba(255, 255, 255, 0.92);
-      font-size: 16px;
     }
+    #paste img { width: 18px; height: 18px; }
 
     #search {
       width: 100%;
@@ -91,8 +91,8 @@
 </head>
 <body>
   <div class="row">
+    <button id="paste" title="Aus Zwischenablage einfügen"><img src="icons/paste.png"></button>
     <input type="text" id="query" placeholder="Suchbegriff">
-    <button id="paste" title="Aus Zwischenablage einfügen">📋</button>
   </div>
   <button id="search">Suchen (lrclib.net)</button>
   <div class="alt-row">
