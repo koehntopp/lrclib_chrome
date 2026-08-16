@@ -2,6 +2,17 @@ const queryEl = document.getElementById('query');
 const statusEl = document.getElementById('status');
 const STORAGE_KEY = 'lastQuery';
 
+// UI-Texte lokalisieren (siehe _locales/<lang>/messages.json)
+document.querySelectorAll('[data-i18n]').forEach((el) => {
+  el.textContent = chrome.i18n.getMessage(el.dataset.i18n);
+});
+document.querySelectorAll('[data-i18n-title]').forEach((el) => {
+  el.title = chrome.i18n.getMessage(el.dataset.i18nTitle);
+});
+document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+  el.placeholder = chrome.i18n.getMessage(el.dataset.i18nPlaceholder);
+});
+
 const SITE_URLS = {
   lrclib: (q) => 'https://lrclib.net/search/' + encodeURIComponent(q),
   // AZLyrics' eigene /search/-Seite ist eine Client-Side-App und wertet
@@ -28,14 +39,14 @@ document.getElementById('paste').addEventListener('click', async () => {
     queryEl.focus();
     statusEl.textContent = '';
   } catch (e) {
-    statusEl.textContent = 'Zwischenablage konnte nicht gelesen werden.';
+    statusEl.textContent = chrome.i18n.getMessage('statusClipboardError');
   }
 });
 
 function openSearch(site) {
   const text = queryEl.value.trim();
   if (!text) {
-    statusEl.textContent = 'Bitte einen Suchbegriff eingeben.';
+    statusEl.textContent = chrome.i18n.getMessage('statusEmptyQuery');
     return;
   }
   chrome.storage.local.set({ [STORAGE_KEY]: text });

@@ -40,6 +40,20 @@ azlyrics.com, genius.com oder Google öffnet.
   funktioniert). Eine site-eingeschränkte Google-Suche umgeht das.
 - genius.com: `https://genius.com/search?q=<query>`.
 
+## Internationalisierung
+- Sprachen: Deutsch (`de`, `default_locale`), Englisch (`en`), Französisch
+  (`fr`) via Chrome-i18n-Mechanismus (`_locales/<lang>/messages.json`).
+  Chrome wählt die Sprache automatisch anhand der Browser-Spracheinstellung.
+- `manifest.json` nutzt `__MSG_extName__` / `__MSG_extDescription__`
+  statt Klartext.
+- `popup.html`-Elemente tragen `data-i18n` (Textinhalt), `data-i18n-title`
+  (Tooltip) bzw. `data-i18n-placeholder` (Eingabefeld-Placeholder) statt
+  hartcodiertem Text; `popup.js` ersetzt diese beim Laden per
+  `chrome.i18n.getMessage()`. Dynamische Statusmeldungen (leeres Suchfeld,
+  Clipboard-Fehler) laufen ebenfalls über `chrome.i18n.getMessage()`.
+- Domain-Namen (lrclib.net, azlyrics.com, genius.com) und der Markenname
+  „Quick Lyrics“ bleiben in allen Sprachen unübersetzt.
+
 ## Icons
 - Favicons der vier Ziel-Seiten (`icons/lrclib.png`, `icons/azlyrics.png`,
   `icons/genius.png`, `icons/google.png`) werden **lokal mitgeliefert**,

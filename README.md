@@ -16,6 +16,8 @@ suchen — über mehrere Datenbanken hinweg: [lrclib.net](https://lrclib.net),
   (`lyrics <Suchbegriff>`), falls eine Quelle keinen Treffer hat.
 - Der letzte Suchbegriff wird lokal gespeichert (`chrome.storage.local`)
   und beim nächsten Öffnen vorausgefüllt.
+- Verfügbar auf Deutsch, Englisch und Französisch (passt sich automatisch
+  an die Browsersprache an).
 
 ## Installation
 
@@ -34,6 +36,7 @@ icon.png        Quell-Icon der Extension
 paste.png       Quell-Icon des Paste-Buttons
 icons/          Generierte Extension-Icons + Favicons der Zielseiten
 bg.jpeg         Hintergrundbild des Popups
+_locales/       Übersetzungen (de, en, fr) für Chrome-i18n
 ```
 
 ## Design-Entscheidungen

@@ -1,0 +1,46 @@
+{
+  "extName": {
+    "message": "Quick Lyrics",
+    "description": "Name der Extension"
+  },
+  "extDescription": {
+    "message": "Songtexte in einem Klick finden – durchsucht lrclib.net, AZLyrics, Genius und Google.",
+    "description": "Kurzbeschreibung der Extension"
+  },
+  "searchPlaceholder": {
+    "message": "Suchbegriff",
+    "description": "Placeholder im Sucheingabefeld"
+  },
+  "pasteButtonTitle": {
+    "message": "Aus Zwischenablage einfügen",
+    "description": "Tooltip des Paste-Buttons"
+  },
+  "searchButton": {
+    "message": "Suchen (lrclib.net)",
+    "description": "Beschriftung des primären Suchen-Buttons"
+  },
+  "siteLrclibTitle": {
+    "message": "lrclib.net",
+    "description": "Tooltip des lrclib.net-Buttons"
+  },
+  "siteAzlyricsTitle": {
+    "message": "azlyrics.com",
+    "description": "Tooltip des AZLyrics-Buttons"
+  },
+  "siteGeniusTitle": {
+    "message": "genius.com",
+    "description": "Tooltip des Genius-Buttons"
+  },
+  "siteGoogleTitle": {
+    "message": "Google-Suche",
+    "description": "Tooltip des Google-Buttons"
+  },
+  "statusClipboardError": {
+    "message": "Zwischenablage konnte nicht gelesen werden.",
+    "description": "Fehlermeldung, wenn das Lesen der Zwischenablage fehlschlägt"
+  },
+  "statusEmptyQuery": {
+    "message": "Bitte einen Suchbegriff eingeben.",
+    "description": "Hinweis, wenn das Suchfeld leer ist"
+  }
+}

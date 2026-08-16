@@ -1,0 +1,46 @@
+{
+  "extName": {
+    "message": "Quick Lyrics",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Find song lyrics in one click – searches lrclib.net, AZLyrics, Genius and Google.",
+    "description": "Extension short description"
+  },
+  "searchPlaceholder": {
+    "message": "Search term",
+    "description": "Placeholder in the search input"
+  },
+  "pasteButtonTitle": {
+    "message": "Paste from clipboard",
+    "description": "Tooltip of the paste button"
+  },
+  "searchButton": {
+    "message": "Search (lrclib.net)",
+    "description": "Label of the primary search button"
+  },
+  "siteLrclibTitle": {
+    "message": "lrclib.net",
+    "description": "Tooltip of the lrclib.net button"
+  },
+  "siteAzlyricsTitle": {
+    "message": "azlyrics.com",
+    "description": "Tooltip of the AZLyrics button"
+  },
+  "siteGeniusTitle": {
+    "message": "genius.com",
+    "description": "Tooltip of the Genius button"
+  },
+  "siteGoogleTitle": {
+    "message": "Google search",
+    "description": "Tooltip of the Google button"
+  },
+  "statusClipboardError": {
+    "message": "Could not read the clipboard.",
+    "description": "Error message when reading the clipboard fails"
+  },
+  "statusEmptyQuery": {
+    "message": "Please enter a search term.",
+    "description": "Hint shown when the search field is empty"
+  }
+}

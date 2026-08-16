@@ -1,0 +1,46 @@
+{
+  "extName": {
+    "message": "Quick Lyrics",
+    "description": "Nom de l'extension"
+  },
+  "extDescription": {
+    "message": "Trouvez des paroles de chansons en un clic – recherche sur lrclib.net, AZLyrics, Genius et Google.",
+    "description": "Description courte de l'extension"
+  },
+  "searchPlaceholder": {
+    "message": "Terme de recherche",
+    "description": "Texte indicatif du champ de recherche"
+  },
+  "pasteButtonTitle": {
+    "message": "Coller depuis le presse-papiers",
+    "description": "Infobulle du bouton de collage"
+  },
+  "searchButton": {
+    "message": "Rechercher (lrclib.net)",
+    "description": "Libellé du bouton de recherche principal"
+  },
+  "siteLrclibTitle": {
+    "message": "lrclib.net",
+    "description": "Infobulle du bouton lrclib.net"
+  },
+  "siteAzlyricsTitle": {
+    "message": "azlyrics.com",
+    "description": "Infobulle du bouton AZLyrics"
+  },
+  "siteGeniusTitle": {
+    "message": "genius.com",
+    "description": "Infobulle du bouton Genius"
+  },
+  "siteGoogleTitle": {
+    "message": "Recherche Google",
+    "description": "Infobulle du bouton Google"
+  },
+  "statusClipboardError": {
+    "message": "Impossible de lire le presse-papiers.",
+    "description": "Message d'erreur si la lecture du presse-papiers échoue"
+  },
+  "statusEmptyQuery": {
+    "message": "Veuillez saisir un terme de recherche.",
+    "description": "Indication affichée quand le champ de recherche est vide"
+  }
+}
