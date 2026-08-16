@@ -38,24 +38,3 @@ bg.jpeg         Hintergrundbild des Popups
 ## Design-Entscheidungen
 
 Details zu Architektur- und UI-Entscheidungen siehe [CLAUDE.md](CLAUDE.md).
-
-## Release-Automation
-
-Bei Veröffentlichung eines GitHub-Release (`release: published`) packt
-[`.github/workflows/release.yml`](.github/workflows/release.yml) die
-Extension als ZIP und veröffentlicht sie automatisch im Chrome Web
-Store (via [`mnao305/chrome-extension-upload`](https://github.com/mnao305/chrome-extension-upload)).
-
-Dafür müssen folgende Repository-Secrets gesetzt sein
-(Settings → Secrets and variables → Actions):
-
-| Secret | Bedeutung |
-| --- | --- |
-| `CHROME_EXTENSION_ID` | ID der Extension im Chrome Web Store |
-| `CHROME_CLIENT_ID` | OAuth-Client-ID (Google Cloud Console) |
-| `CHROME_CLIENT_SECRET` | OAuth-Client-Secret |
-| `CHROME_REFRESH_TOKEN` | OAuth-Refresh-Token mit Zugriff auf die Chrome Web Store API |
-
-Die Extension muss vorher mindestens einmal manuell im
-[Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole)
-angelegt worden sein, damit eine `CHROME_EXTENSION_ID` existiert.
