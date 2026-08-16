@@ -1,7 +1,13 @@
-# LRCLIB Clipboard Search — Design-Entscheidungen
+# Quick Lyrics — Design-Entscheidungen
 
 Chrome-Extension (Manifest V3), die einen Suchbegriff bei lrclib.net,
-azlyrics.com oder genius.com öffnet.
+azlyrics.com, genius.com oder Google öffnet.
+
+## Naming
+- Ursprünglich hieß die Extension „LRCLIB Clipboard Search“. Umbenannt zu
+  „Quick Lyrics“, weil lrclib.net nur eine von vier durchsuchbaren
+  Quellen ist (nicht die alleinige Kernfunktion) und die Zwischenablage
+  nur eine unterstützende Eingabehilfe ist, kein Namens-Feature.
 
 ## Architektur
 - Kein Background-Service-Worker: die gesamte Logik läuft im Popup
@@ -31,14 +37,17 @@ azlyrics.com oder genius.com öffnet.
 - genius.com: `https://genius.com/search?q=<query>`.
 
 ## Icons
-- Favicons der drei Ziel-Seiten (`icons/lrclib.png`, `icons/azlyrics.png`,
-  `icons/genius.png`) werden **lokal mitgeliefert**, nicht zur Laufzeit
-  von Google/den Zielseiten geladen — vermeidet Netzwerkfehler und
-  CSP-Probleme im Popup.
+- Favicons der vier Ziel-Seiten (`icons/lrclib.png`, `icons/azlyrics.png`,
+  `icons/genius.png`, `icons/google.png`) werden **lokal mitgeliefert**,
+  nicht zur Laufzeit von Google/den Zielseiten geladen — vermeidet
+  Netzwerkfehler und CSP-Probleme im Popup.
 - Das Extension-Icon selbst kommt aus `icon.png` (vom Nutzer geliefert)
   und wird per `sips` in 16/32/48/128px nach `icons/icon*.png`
   gerendert, da Chrome-Extension-Icons kein SVG unterstützen (Manifest
   V3 verlangt Raster-Formate).
+- Der Paste-Button nutzt `paste.png` (vom Nutzer geliefert, in
+  `icons/paste.png` kopiert) statt eines Emoji, und sitzt links vom
+  Eingabefeld statt rechts.
 
 ## Optik
 - `bg.jpeg` ist der Popup-Hintergrund (nicht nur im Suchfeld). Die

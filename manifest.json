@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "LRCLIB Clipboard Search",
+  "name": "Quick Lyrics",
   "version": "1.0.1",
-  "description": "Sucht bei lrclib.net nach dem Inhalt der Zwischenablage.",
+  "description": "Songtexte in einem Klick finden – durchsucht lrclib.net, AZLyrics, Genius und Google.",
   "permissions": ["clipboardRead", "storage"],
   "icons": {
     "16": "icons/icon16.png",
