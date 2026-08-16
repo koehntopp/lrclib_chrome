@@ -4,7 +4,10 @@ const STORAGE_KEY = 'lastQuery';
 
 const SITE_URLS = {
   lrclib: (q) => 'https://lrclib.net/search/' + encodeURIComponent(q),
-  azlyrics: (q) => 'https://www.azlyrics.com/search/?q=' + encodeURIComponent(q),
+  // AZLyrics' eigene /search/-Seite ist eine Client-Side-App und wertet
+  // ?q= bei einem direkten Seitenaufruf nicht aus. Deshalb stattdessen
+  // eine auf azlyrics.com eingeschränkte Google-Suche.
+  azlyrics: (q) => 'https://www.google.com/search?q=' + encodeURIComponent('site:azlyrics.com ' + q),
   genius: (q) => 'https://genius.com/search?q=' + encodeURIComponent(q),
   google: (q) => 'https://www.google.com/search?q=' + encodeURIComponent('lyrics ' + q),
 };

@@ -31,9 +31,13 @@ azlyrics.com, genius.com oder Google öffnet.
 ## Such-URLs
 - lrclib.net: `https://lrclib.net/search/<query>` (URL-encodiert,
   Leerzeichen als `%20`; ermittelt durch Live-Test der Such-UI).
-- azlyrics.com: `https://www.azlyrics.com/search/?q=<query>`
-  (die zunächst verwendete `search.azlyrics.com/search.php`-URL war
-  falsch und wurde korrigiert).
+- azlyrics.com: `https://www.google.com/search?q=site:azlyrics.com <query>`.
+  Zwei vorherige Versuche haben sich als nicht funktionsfähig erwiesen:
+  `search.azlyrics.com/search.php?q=<query>` (falsche/alte URL) und
+  danach `https://www.azlyrics.com/search/?q=<query>` (die Seite ist
+  eine Client-Side-App, die `?q=` bei einem direkten Seitenaufruf nicht
+  auswertet — nur eine echte Suche über AZLyrics' eigenes Suchfeld
+  funktioniert). Eine site-eingeschränkte Google-Suche umgeht das.
 - genius.com: `https://genius.com/search?q=<query>`.
 
 ## Icons
