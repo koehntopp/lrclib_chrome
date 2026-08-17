@@ -19,10 +19,8 @@
       color: #fff;
     }
 
-    .row { display: flex; gap: 8px; }
-
     input[type="text"] {
-      flex: 1;
+      width: 100%;
       padding: 9px 12px;
       font-size: 13px;
       border: none;
@@ -48,37 +46,25 @@
     button:hover { filter: brightness(1.08); }
     button:active { transform: scale(0.96); }
 
-    #paste {
-      width: 38px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255, 255, 255, 0.92);
-    }
-    #paste img { width: 18px; height: 18px; }
-
-    #search {
-      width: 100%;
+    .site-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
       margin-top: 10px;
-      padding: 9px;
-      background: linear-gradient(135deg, #22c19a, #1aa885);
-      color: #fff;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
     }
-
-    .alt-row { display: flex; gap: 8px; margin-top: 10px; }
 
     .site-btn {
-      flex: 1;
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 8px;
+      gap: 8px;
+      padding: 9px 12px;
       background: rgba(255, 255, 255, 0.14);
       backdrop-filter: blur(4px);
       border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #fff;
     }
-    .site-btn img { width: 18px; height: 18px; }
+    .site-btn img { width: 18px; height: 18px; flex-shrink: 0; }
+    .site-btn span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
     p#status {
       min-height: 14px;
@@ -90,23 +76,19 @@
   </style>
 </head>
 <body>
-  <div class="row">
-    <button id="paste" data-i18n-title="pasteButtonTitle"><img src="icons/paste.png"></button>
-    <input type="text" id="query" data-i18n-placeholder="searchPlaceholder">
-  </div>
-  <button id="search" data-i18n="searchButton"></button>
-  <div class="alt-row">
-    <button class="site-btn" data-site="lrclib" data-i18n-title="siteLrclibTitle">
-      <img src="icons/lrclib.png">
+  <input type="text" id="query" data-i18n-placeholder="searchPlaceholder">
+  <div class="site-grid">
+    <button class="site-btn" data-site="lrclib">
+      <img src="icons/lrclib.png"><span data-i18n="siteLrclibLabel"></span>
     </button>
-    <button class="site-btn" data-site="azlyrics" data-i18n-title="siteAzlyricsTitle">
-      <img src="icons/azlyrics.png">
+    <button class="site-btn" data-site="azlyrics">
+      <img src="icons/azlyrics.png"><span data-i18n="siteAzlyricsLabel"></span>
     </button>
-    <button class="site-btn" data-site="genius" data-i18n-title="siteGeniusTitle">
-      <img src="icons/genius.png">
+    <button class="site-btn" data-site="genius">
+      <img src="icons/genius.png"><span data-i18n="siteGeniusLabel"></span>
     </button>
-    <button class="site-btn" data-site="google" data-i18n-title="siteGoogleTitle">
-      <img src="icons/google.png">
+    <button class="site-btn" data-site="google">
+      <img src="icons/google.png"><span data-i18n="siteGoogleLabel"></span>
     </button>
   </div>
   <p id="status"></p>

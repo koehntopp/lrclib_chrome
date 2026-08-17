@@ -11,33 +11,21 @@
     "message": "Search term",
     "description": "Placeholder in the search input"
   },
-  "pasteButtonTitle": {
-    "message": "Paste from clipboard",
-    "description": "Tooltip of the paste button"
-  },
-  "searchButton": {
-    "message": "Search (lrclib.net)",
-    "description": "Label of the primary search button"
-  },
-  "siteLrclibTitle": {
+  "siteLrclibLabel": {
     "message": "lrclib.net",
-    "description": "Tooltip of the lrclib.net button"
+    "description": "Label of the lrclib.net button"
   },
-  "siteAzlyricsTitle": {
-    "message": "azlyrics.com",
-    "description": "Tooltip of the AZLyrics button"
+  "siteAzlyricsLabel": {
+    "message": "AZLyrics",
+    "description": "Label of the AZLyrics button"
   },
-  "siteGeniusTitle": {
-    "message": "genius.com",
-    "description": "Tooltip of the Genius button"
+  "siteGeniusLabel": {
+    "message": "Genius",
+    "description": "Label of the Genius button"
   },
-  "siteGoogleTitle": {
-    "message": "Google search",
-    "description": "Tooltip of the Google button"
-  },
-  "statusClipboardError": {
-    "message": "Could not read the clipboard.",
-    "description": "Error message when reading the clipboard fails"
+  "siteGoogleLabel": {
+    "message": "Google",
+    "description": "Label of the Google button"
   },
   "statusEmptyQuery": {
     "message": "Please enter a search term.",

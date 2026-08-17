@@ -7,13 +7,11 @@ suchen — über mehrere Datenbanken hinweg: [lrclib.net](https://lrclib.net),
 ## Funktionen
 
 - Klick auf das Extension-Icon öffnet ein Eingabefeld mit dem zuletzt
-  verwendeten Suchbegriff.
-- 📋-Button fügt bei Bedarf den Inhalt der Zwischenablage ein
-  (kein automatisches Auslesen — du hast die Kontrolle).
-- „Suchen“ öffnet die Ergebnisseite bei lrclib.net in einem neuen Tab.
-- Vier zusätzliche Buttons (mit den Favicons der jeweiligen Seite)
-  suchen alternativ bei lrclib.net, AZLyrics, Genius oder per Google
-  (`lyrics <Suchbegriff>`), falls eine Quelle keinen Treffer hat.
+  verwendeten Suchbegriff (Einfügen aus der Zwischenablage per normalem
+  Cmd/Ctrl+V).
+- Vier gleichwertige Buttons (Icon + Name) suchen bei lrclib.net,
+  AZLyrics, Genius oder per Google (`lyrics <Suchbegriff>`) — je
+  nachdem, wo du einen Treffer erwartest.
 - Der letzte Suchbegriff wird lokal gespeichert (`chrome.storage.local`)
   und beim nächsten Öffnen vorausgefüllt.
 - Verfügbar auf Deutsch, Englisch und Französisch (passt sich automatisch
@@ -33,7 +31,6 @@ manifest.json   Manifest V3 Konfiguration
 popup.html      UI des Popups
 popup.js        Logik (Clipboard, Suche, Storage)
 icon.png        Quell-Icon der Extension
-paste.png       Quell-Icon des Paste-Buttons
 icons/          Generierte Extension-Icons + Favicons der Zielseiten
 bg.jpeg         Hintergrundbild des Popups
 _locales/       Übersetzungen (de, en, fr) für Chrome-i18n

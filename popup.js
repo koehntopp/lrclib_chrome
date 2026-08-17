@@ -32,17 +32,6 @@ chrome.storage.local.get(STORAGE_KEY, (data) => {
   queryEl.focus();
 });
 
-document.getElementById('paste').addEventListener('click', async () => {
-  try {
-    const text = await navigator.clipboard.readText();
-    queryEl.value = text;
-    queryEl.focus();
-    statusEl.textContent = '';
-  } catch (e) {
-    statusEl.textContent = chrome.i18n.getMessage('statusClipboardError');
-  }
-});
-
 function openSearch(site) {
   const text = queryEl.value.trim();
   if (!text) {
@@ -54,7 +43,6 @@ function openSearch(site) {
   window.close();
 }
 
-document.getElementById('search').addEventListener('click', () => openSearch('lrclib'));
 queryEl.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') openSearch('lrclib');
 });

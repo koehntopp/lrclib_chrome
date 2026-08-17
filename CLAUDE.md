@@ -16,12 +16,12 @@ azlyrics.com, genius.com oder Google öffnet.
   (`chrome.tabs.create` ohne `windowId`).
 
 ## Zwischenablage
-- Clipboard wird **nicht automatisch** beim Öffnen des Popups gelesen,
-  sondern nur auf expliziten Klick auf den 📋-Button
-  (`navigator.clipboard.readText()` im Klick-Handler, damit die
-  User-Geste für die Berechtigung vorhanden ist).
-- Grund: automatisches Auslesen beim Öffnen wurde als unerwünscht
-  empfunden — der Nutzer soll die Kontrolle behalten, was gesucht wird.
+- Ursprünglich gab es einen eigenen 📋/Paste-Button
+  (`navigator.clipboard.readText()`), der bewusst nur auf Klick las,
+  nie automatisch. Der Button wurde später wieder entfernt (samt
+  `clipboardRead`-Permission) zugunsten des simpleren UI-Layouts mit
+  vier gleichwertigen Quell-Buttons — Einfügen per natives Cmd/Ctrl+V
+  ins Eingabefeld funktioniert weiterhin ohne jede Permission.
 
 ## Persistenz
 - Der zuletzt verwendete Suchbegriff wird in `chrome.storage.local`
@@ -46,11 +46,16 @@ azlyrics.com, genius.com oder Google öffnet.
   Chrome wählt die Sprache automatisch anhand der Browser-Spracheinstellung.
 - `manifest.json` nutzt `__MSG_extName__` / `__MSG_extDescription__`
   statt Klartext.
-- `popup.html`-Elemente tragen `data-i18n` (Textinhalt), `data-i18n-title`
-  (Tooltip) bzw. `data-i18n-placeholder` (Eingabefeld-Placeholder) statt
-  hartcodiertem Text; `popup.js` ersetzt diese beim Laden per
-  `chrome.i18n.getMessage()`. Dynamische Statusmeldungen (leeres Suchfeld,
-  Clipboard-Fehler) laufen ebenfalls über `chrome.i18n.getMessage()`.
+- `popup.html`-Elemente tragen `data-i18n` (Textinhalt) bzw.
+  `data-i18n-placeholder` (Eingabefeld-Placeholder) statt hartcodiertem
+  Text; `popup.js` ersetzt diese beim Laden per
+  `chrome.i18n.getMessage()`. Die dynamische Statusmeldung (leeres
+  Suchfeld) läuft ebenfalls darüber.
+- Achtung beim lokalen Vorschau-Rendern (z. B. per `qlmanage`/Quick
+  Look): Externe `<script>`-Dateien werden dort nicht ausgeführt, JS-
+  gesetzter Text bleibt leer. Für optische Kontrollen ohne echten
+  Extension-Kontext den Text testweise direkt ins HTML schreiben statt
+  über `chrome.i18n.getMessage()` zu verlassen.
 - Domain-Namen (lrclib.net, azlyrics.com, genius.com) und der Markenname
   „Quick Lyrics“ bleiben in allen Sprachen unübersetzt.
 
@@ -63,9 +68,6 @@ azlyrics.com, genius.com oder Google öffnet.
   und wird per `sips` in 16/32/48/128px nach `icons/icon*.png`
   gerendert, da Chrome-Extension-Icons kein SVG unterstützen (Manifest
   V3 verlangt Raster-Formate).
-- Der Paste-Button nutzt `paste.png` (vom Nutzer geliefert, in
-  `icons/paste.png` kopiert) statt eines Emoji, und sitzt links vom
-  Eingabefeld statt rechts.
 
 ## Optik
 - `bg.jpeg` ist der Popup-Hintergrund (nicht nur im Suchfeld). Die
@@ -76,5 +78,10 @@ azlyrics.com, genius.com oder Google öffnet.
   der untere Bildbereich mit der Wellen-/Noten-Grafik bleibt frei
   sichtbar.
 - Modernes UI: abgerundete Ecken, halbtransparente/"glassige"
-  Site-Buttons, Farbverlauf beim primären Suchen-Button, Fokus-Ring
-  am Eingabefeld, dezente Hover-/Klick-Animationen.
+  Site-Buttons, Fokus-Ring am Eingabefeld, dezente Hover-/Klick-
+  Animationen.
+- Layout: Eingabefeld über einem 2×2-Grid aus vier gleichwertigen
+  Buttons (Icon + Text: lrclib.net, AZLyrics, Genius, Google) statt
+  vorher einem hervorgehobenen "Suchen"-Button plus separater Reihe
+  reiner Icon-Buttons — bewusst gleichwertig, weil keine Quelle
+  gegenüber den anderen priorisiert werden soll.

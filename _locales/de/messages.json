@@ -11,33 +11,21 @@
     "message": "Suchbegriff",
     "description": "Placeholder im Sucheingabefeld"
   },
-  "pasteButtonTitle": {
-    "message": "Aus Zwischenablage einfügen",
-    "description": "Tooltip des Paste-Buttons"
-  },
-  "searchButton": {
-    "message": "Suchen (lrclib.net)",
-    "description": "Beschriftung des primären Suchen-Buttons"
-  },
-  "siteLrclibTitle": {
+  "siteLrclibLabel": {
     "message": "lrclib.net",
-    "description": "Tooltip des lrclib.net-Buttons"
+    "description": "Beschriftung des lrclib.net-Buttons"
   },
-  "siteAzlyricsTitle": {
-    "message": "azlyrics.com",
-    "description": "Tooltip des AZLyrics-Buttons"
+  "siteAzlyricsLabel": {
+    "message": "AZLyrics",
+    "description": "Beschriftung des AZLyrics-Buttons"
   },
-  "siteGeniusTitle": {
-    "message": "genius.com",
-    "description": "Tooltip des Genius-Buttons"
+  "siteGeniusLabel": {
+    "message": "Genius",
+    "description": "Beschriftung des Genius-Buttons"
   },
-  "siteGoogleTitle": {
-    "message": "Google-Suche",
-    "description": "Tooltip des Google-Buttons"
-  },
-  "statusClipboardError": {
-    "message": "Zwischenablage konnte nicht gelesen werden.",
-    "description": "Fehlermeldung, wenn das Lesen der Zwischenablage fehlschlägt"
+  "siteGoogleLabel": {
+    "message": "Google",
+    "description": "Beschriftung des Google-Buttons"
   },
   "statusEmptyQuery": {
     "message": "Bitte einen Suchbegriff eingeben.",
