@@ -39,6 +39,15 @@ bg.jpeg         Hintergrundbild des Popups
 _locales/       Übersetzungen (de, en, fr) für Chrome-i18n
 ```
 
+## Store-Texte
+
+Die lange Store-Beschreibung (Marketing-Text im Chrome Web Store
+Developer Dashboard, getrennt von `_locales/`) liegt zur Referenz auf
+Deutsch, Englisch und Französisch unter
+[store-assets/descriptions/](store-assets/descriptions/). Das Dashboard
+übernimmt diese Texte nicht automatisch — bei Änderungen hier auch dort
+manuell (pro Sprache im Store-Listing-Tab) nachpflegen.
+
 ## Design-Entscheidungen
 
 Details zu Architektur- und UI-Entscheidungen siehe [CLAUDE.md](CLAUDE.md).
